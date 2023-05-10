@@ -1,6 +1,10 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
+    padding : 0%;
+    margin: 0%;
+    box-sizing: border-box;
+
 }
 
 :root {
@@ -14,15 +18,167 @@
 }
 
 body {
-    display: flex;
-    justify-content: center;
+    max-width: 1440px;
+    width: 95%;
+    margin:auto;
+    
 }
+
+.logo-booki {
+    width: 61px;
+    height: 19px;
+    
+    margin: 30px 0px 0px 15px;
+   }
+   
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+}
+
+.menu-style {
+    padding: 18px 34px 0 34px;
+    color: black;
+}
+
+.menu-style :hover {
+    color: var(--main-color);
+    border-top: 2px solid var(--main-color);
+    padding-top: 22px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.texte-intro {
+    padding: 30px 0px 30px 0px;
+}
+
+.p-police {
+    font-weight: 400;
+    font-size: 14
+}
+
+.formu-style {    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: 20%;
+    
+    margin-bottom: 30px;    
+}
+
+.formu-logo { 
+padding: 14px 18px 15px 18px; 
+border: 1px solid var(--main-bg-color);  
+border-radius: 15px 0px 0px 15px;
+background-color: var(--main-bg-color);
+color:black;
+}
+
+.formu-texte {
+    font-weight: 700;
+    font-size : 18px;
+    text-align: center;
+
+    border: 1px solid var(--main-bg-color);
+    padding: 12px 0px 12px 0px;
+}
+
+.formu-texte, textarea {
+    outline: none;
+}
+
+.formu-recherche {
+    background-color: var(--main-color);
+    color: white;  
+    border: 1px solid var(--main-color);
+    border-radius : 0px 15px 15px 0px;
+    padding: 15px 16px 15px 16px;
+}
+
+.section-filtres {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    
+    width: 55%;
+    margin-bottom: 30px;
+}
+
+.bloc-filtre {
+    display: flex;
+    align-items: center;    
+    gap: 15px;
+
+    width: 100%;
+    padding: 0px 0px 30px 0px;
+}
+
+.filtre {
+    display: flex;
+    align-items: center; 
+    
+
+    width: fit-content;
+    height: 50px;
+
+    gap: 10px;
+    padding: 4px 19px;
+
+    border: 2px solid var(--main-bg-color);  
+    border-radius: 25px;
+    background-color: white;
+
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.filtre :hover {
+    background-color: var(--filter-bg-color);
+}
+
+.info-filtre {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-info {
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+    width: 24px;
+    height: 24px;
+    border-radius: 50% 50% 50% 50%;
+    
+
+    border: 1px solid #D9d9d9;
+}
+
 
 .main-container {
     width: 100%;
     max-width: 1440px;
-    padding: 0 50px;
+    padding: 0 50px 0 50px;
     box-sizing: border-box;
+    
 }
 
 .section-title {
@@ -39,6 +195,7 @@ body {
 
 .card img {
     object-fit: cover;
+    
 }
 
 .card-title {
@@ -56,6 +213,8 @@ body {
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
+    display: row;
+    
     justify-content: space-between;
 }
 
@@ -68,7 +227,10 @@ body {
 
 /****** Hebergements ***********/
 .hebergements {
+    display: flex;
+    flex-wrap: wrap;
     width: 65%;
+    
 }
 
 /****** Populaires ***********/
@@ -116,7 +278,12 @@ body {
     margin-bottom: 5px;
 }
 
-
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
