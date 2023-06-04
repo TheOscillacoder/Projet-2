@@ -20,18 +20,19 @@
 body {
     max-width: 1440px;
     width: 100%;
-    margin: 0px;
+    overflow-x: hidden;
 }
 
 main {
     width: 93%;
     margin-left: 50px;
     margin-right: 50px;
+   
 }
 
 .logo-booki {
-    width: 61px;
-    height: 19px;
+    width: 3.85em; /*61px*/
+    height: 1.2em;/*19px*/
     
     margin-top: 30px;
     margin-left: 30px;
@@ -45,7 +46,6 @@ header {
     align-items: center;
     width: 100%;
 }
-
 
 nav ul {
     display: flex;
@@ -72,8 +72,6 @@ ul {
 a {
     text-decoration: none; 
 }
-
-
 
 h1 {
     font-weight: 700;
@@ -198,14 +196,13 @@ ul {
     display: flex;
     align-items: center;    
 
-    height: 50px;
+    height: 3em;
     width: fit-content;
 
     border: 2px solid var(--main-bg-color);
     border-radius: 25px;
 
     gap: 10px;
-    /*margin: 5px 5px 5px 0px;*/
     padding: 4px 19px;
 
     font-weight: 700;
@@ -264,7 +261,7 @@ ul {
 
 .card:hover, .activite-card:hover {
     transform: scale(1.05);
-    transition-duration: 1s;
+    transition-duration: 0.7s;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     z-index: 10;
     cursor: pointer;
@@ -305,8 +302,7 @@ ul {
 .hebergements-cards {
     display: grid;
     grid-template-columns: 31% 31% 31%/*250px 250px 250px*/;
-    /*abandon des valeurs absolues en px pour ajustement "width" du conteneur pour la compatibilité en media queries*/
-    grid-template-rows: /*47% 47%*/207px 207px;
+    grid-template-rows: 47% 47%;/*207px 207px*/
 
     column-gap: 30px;
     row-gap: 30px;   
@@ -324,7 +320,7 @@ ul {
     background-size: cover;
 
     width: 100%;
-    height: 125px;
+    height: 7.85em;/*125px*/
 
     border: 5px solid white;
     border-radius: 20px 20px 0px 0px;
@@ -368,7 +364,7 @@ ul {
 
 .populaires-cards img {  
     width: 33%;
-    height: 144px;
+    height: 9em; /*144px*/
 
     border: 5px solid white;
     border-right-width: 0px;
@@ -416,15 +412,15 @@ ul {
     justify-content: space-between;
     gap: 30px;
 
-    width: 98%;
+    width: 100%;
     padding-top: 30px;   
 }
 
 .activite-card {
     display: flex;    
     flex-direction: column;
-    width: 100%;
-    height: 380px;
+    width: 105%;
+    height: 28em;/*380px*/
 
     border-radius: 20px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
@@ -444,7 +440,6 @@ ul {
 }
 
 .activite-card .card-title {
-    align-items: center;
     padding : 20px 19px 0px 19px;
 }
 
@@ -488,10 +483,7 @@ main {
     width: 90%;
 }
 
-.logo-booki {
-    width: 61px;
-    height: 19px;
-        
+.logo-booki {        
     margin-top: 30px;
     margin-left: 50px;
 }
@@ -562,19 +554,27 @@ main {
 
 .activite-card {         
     width: 100%;
-    height: 270px;    
+    height: 17em;/*270px*/    
 }
 
 .activite-card img { 
     background-size: cover;   
     width: 100%;
-    height: 200px;
+    height: 74%;
+    min-height: 74%;
 }
+
+.activite-card .card-title {
+    padding: 16px 19px 16px 19px;
+    font-size: smaller;
+    align-self: stretch;
+}
+
 }
 
 
 /* Small devices (phones, less than 768px)-------------------- */
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
     /* ... */
 
 main {
@@ -599,7 +599,8 @@ nav {
 
 nav ul {      
     border-bottom: 2px solid var(--main-bg-color);         
-    justify-content: space-between;                   
+    justify-content: space-between;  
+    text-align: center;                 
 }
 
 nav ul :hover {     
@@ -658,7 +659,8 @@ nav ul :hover {
 
 .filtre {
     width: 35%;
-    min-width: 150px;
+    min-width: 150px; /*min width en pixel plutôt qu'en % pour un résultat
+    plus conforme au design min de 320px de la maquette maquette*/
     font-size: 14px;  
 }
 
@@ -672,8 +674,8 @@ nav ul :hover {
 }
 
 .logo-info {
-    min-width: 24px;
-    min-height: 24px;
+    min-width: 1.5em;
+    min-height: 1em;
   }
 
 /*------------------Hébergement------------------*/
@@ -709,7 +711,7 @@ nav ul :hover {
 
 .hebergements-cards .cards {
     width: 100%;
-    max-width: unset;
+    /*max-width: unset;*/
 }
 
 .populaires {
@@ -728,7 +730,7 @@ nav ul :hover {
 
 .populaires-cards .card {
     width: 100%;
-    height: 146px;
+    height: 39%;
 }
 
 .activites-marseilles {
@@ -750,6 +752,11 @@ nav ul :hover {
 
 .activite-card {
     width: 100%;    
+}
+
+.activite-card .card-title {
+    padding: 20px 19px 20px 19px;
+    font-size: 16px;
 }
 
 footer {
