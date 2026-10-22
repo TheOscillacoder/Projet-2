@@ -1,5 +1,13 @@
 # Projet-2
-OpenClassrooms - Développeur Web - Projet 2 - Créez la page d'accueil d'une agence de voyage avec HTML &amp; CSS
+OpenClassrooms - Développeur Web - Projet 2 - Créez la page d'accueil d'une agence de voyage avec HTML & CSS
 
-Cette branche contient le projet final dans le dossier "booki-starter-code-master" mergé depuis la branche de travail "branch-1-work-directory" vers la branche principale "master".
-Le dossier d'images a été uploadé ensuite.
+# Booki - Page d'accueil d'une agence de voyage
+
+Projet réalisé dans le cadre de la formation Développeur Web d'OpenClassrooms : intégration de la page d'accueil de Booki, 
+une agence de voyage, à partir d'une maquette.
+
+## Technologies
+HTML, CSS
+
+## Lancer le projet en local
+Aucune installation nécessaire. Ouvrez simplement le fichier `index.html` dans le navigateur.
